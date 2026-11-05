@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reviews>
+    <review>
+        <product_id>1</product_id>
+        <customer_id>KH001</customer_id>
+        <customer_name>Le Minh Anh</customer_name>
+        <rating>5</rating>
+        <comment>San pham tot, dung mo ta.</comment>
+        <created_date>2026-10-28</created_date>
+    </review>
+    <review>
+        <product_id>1</product_id>
+        <customer_id>KH002</customer_id>
+        <customer_name>Pham Gia Han</customer_name>
+        <rating>4</rating>
+        <comment>Chat luong phu hop.</comment>
+        <created_date>2026-10-30</created_date>
+    </review>
+    <review>
+        <product_id>3</product_id>
+        <customer_id>KH001</customer_id>
+        <customer_name>Le Minh Anh</customer_name>
+        <rating>5</rating>
+        <comment>Thiet ke dep.</comment>
+        <created_date>2026-10-31</created_date>
+    </review>
+</reviews>

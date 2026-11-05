@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carts>
+    <cart id="HD001">
+        <created_date>2026-11-01</created_date>
+        <employee_id>NV002</employee_id>
+        <customer_id>KH001</customer_id>
+        <status>completed</status>
+        <details>
+            <item>
+                <product_id>1</product_id>
+                <product_name>Fjallraven Backpack</product_name>
+                <color>Đen</color>
+                <size>Không áp dụng</size>
+                <quantity>1</quantity>
+                <unit_price>109.95</unit_price>
+            </item>
+        </details>
+        <total>109.95</total>
+    </cart>
+</carts>

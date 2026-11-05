@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 1 - Quản lý dữ liệu sản phẩm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>QUẢN LÝ DỮ LIỆU SẢN PHẨM</h1>
+        <p>Câu 1: Đọc dữ liệu từ Fake Store API và xuất file products.xml</p>
+    </header>
+
+    <main>
+        <section class="control">
+            <button id="btnTaiDuLieu" onclick="LaySanPham()">Tải dữ liệu từ API</button>
+            <button id="btnTaiXML" onclick="TaiFileXML()" disabled>Tải file products.xml</button>
+            <p id="thongBao">Nhấn "Tải dữ liệu từ API" để bắt đầu.</p>
+        </section>
+
+        <section>
+            <h2>Danh sách sản phẩm</h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mã SP</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Danh mục</th>
+                            <th>Giá ($)</th>
+                            <th>Màu sắc</th>
+                            <th>Tồn kho</th>
+                            <th>Đánh giá</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dsSanPham">
+                        <tr>
+                            <td colspan="7" class="empty">Chưa có dữ liệu. Hãy tải dữ liệu từ API.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        Lê Mai Quỳnh | K244161805
+
+    <script src="xuly.js"></script>
+</body>
+</html>
