@@ -1,0 +1,18 @@
+[
+    {
+        "employee_id": "NV001",
+        "full_name": "Nguyen Van An",
+        "username": "admin",
+        "password": "admin123",
+        "role": "admin",
+        "status": "active"
+    },
+    {
+        "employee_id": "NV002",
+        "full_name": "Tran Thi Binh",
+        "username": "nhanvien",
+        "password": "nv123",
+        "role": "staff",
+        "status": "active"
+    }
+]

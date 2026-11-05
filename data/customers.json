@@ -1,0 +1,20 @@
+[
+    {
+        "customer_id": "KH001",
+        "full_name": "Le Minh Anh",
+        "email": "minhanh@example.com",
+        "phone": "0901234567",
+        "address": "Thu Duc, TP.HCM",
+        "username": "minhanh",
+        "password": "kh123"
+    },
+    {
+        "customer_id": "KH002",
+        "full_name": "Pham Gia Han",
+        "email": "giahan@example.com",
+        "phone": "0912345678",
+        "address": "Di An, Binh Duong",
+        "username": "giahan",
+        "password": "kh456"
+    }
+]
