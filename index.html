@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!-- filepath: d:\K24416\K244161805_LeMaiQuynh_K24416\index.html -->
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UELShop - cửa hàng trực tuyến mô phỏng">
+    <title>UELShop - Cửa hàng trực tuyến</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo" aria-label="UELShop - Trang chủ">
+                UEL<span>Shop</span>
+            </a>
+
+            <form id="searchForm" class="search-form" role="search">
+                <label for="searchInput" class="visually-hidden">
+                    Tìm kiếm sản phẩm
+                </label>
+                <input
+                    type="search"
+                    id="searchInput"
+                    name="keyword"
+                    placeholder="Tìm kiếm sản phẩm..."
+                    minlength="2"
+                    maxlength="100"
+                    autocomplete="off"
+                >
+                <button type="submit">Tìm kiếm</button>
+            </form>
+
+            <nav class="header-actions" aria-label="Điều hướng chính">
+                <button
+                    type="button"
+                    id="cartButton"
+                    class="cart-button"
+                    aria-label="Mở giỏ hàng"
+                    aria-controls="cartOverlay"
+                >
+                    Giỏ hàng
+                    <span id="cartCount" class="cart-count">0</span>
+                </button>
+                <a href="admin.html" class="admin-link">Quản trị</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="heroTitle">
+            <div class="hero-content">
+                <p class="hero-label">Mua sắm trực tuyến</p>
+                <h1 id="heroTitle">Sản phẩm phù hợp<br>với phong cách của bạn</h1>
+                <p>Khám phá sản phẩm thời trang, công nghệ và phụ kiện tại UELShop.</p>
+                <a href="#productSection" class="primary-link">Khám phá sản phẩm</a>
+            </div>
+        </section>
+
+        <section id="productSection" class="product-section" aria-labelledby="productTitle">
+            <div class="section-heading">
+                <div>
+                    <p class="section-label">Danh mục cửa hàng</p>
+                    <h2 id="productTitle">Sản phẩm nổi bật</h2>
+                </div>
+                <p id="productResult" class="result-message" aria-live="polite">
+                    Đang tải sản phẩm...
+                </p>
+            </div>
+
+            <div class="product-layout">
+                <aside class="product-filters" aria-labelledby="filterTitle">
+                    <h3 id="filterTitle">Tìm kiếm nâng cao</h3>
+
+                    <form id="advancedSearchForm">
+                        <label for="minPrice">Giá từ (USD)</label>
+                        <input
+                            type="number"
+                            id="minPrice"
+                            name="minPrice"
+                            min="0"
+                            step="0.01"
+                        >
+
+                        <label for="maxPrice">Giá đến (USD)</label>
+                        <input
+                            type="number"
+                            id="maxPrice"
+                            name="maxPrice"
+                            min="0"
+                            step="0.01"
+                        >
+
+                        <label for="filterColor">Màu sắc</label>
+                        <select id="filterColor" name="color">
+                            <option value="">Tất cả màu</option>
+                        </select>
+
+                        <label for="filterRating">Đánh giá tối thiểu</label>
+                        <input
+                            type="number"
+                            id="filterRating"
+                            name="rating"
+                            min="0"
+                            max="5"
+                            step="0.1"
+                        >
+
+                        <label for="filterCategory">Danh mục</label>
+                        <select id="filterCategory" name="category">
+                            <option value="">Tất cả danh mục</option>
+                        </select>
+
+                        <button type="submit">Lọc sản phẩm</button>
+                        <button type="reset">Xóa bộ lọc</button>
+                    </form>
+                </aside>
+
+                <div class="product-results">
+                    <nav aria-label="Danh mục sản phẩm">
+                        <div id="categoryFilters" class="category-filters">
+                            <button
+                                type="button"
+                                class="category-button active"
+                                data-category="all"
+                            >
+                                Tất cả
+                            </button>
+                        </div>
+                    </nav>
+
+                    <div id="productContainer" class="product-grid" aria-live="polite">
+                        <article class="skeleton-card" aria-hidden="true">
+                            <div class="skeleton skeleton-image"></div>
+                            <div class="skeleton skeleton-text"></div>
+                            <div class="skeleton skeleton-text short"></div>
+                            <div class="skeleton skeleton-button"></div>
+                        </article>
+                        <article class="skeleton-card" aria-hidden="true">
+                            <div class="skeleton skeleton-image"></div>
+                            <div class="skeleton skeleton-text"></div>
+                            <div class="skeleton skeleton-text short"></div>
+                            <div class="skeleton skeleton-button"></div>
+                        </article>
+                        <article class="skeleton-card" aria-hidden="true">
+                            <div class="skeleton skeleton-image"></div>
+                            <div class="skeleton skeleton-text"></div>
+                            <div class="skeleton skeleton-text short"></div>
+                            <div class="skeleton skeleton-button"></div>
+                        </article>
+                        <article class="skeleton-card" aria-hidden="true">
+                            <div class="skeleton skeleton-image"></div>
+                            <div class="skeleton skeleton-text"></div>
+                            <div class="skeleton skeleton-text short"></div>
+                            <div class="skeleton skeleton-button"></div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits-section" aria-label="Quyền lợi mua sắm">
+            <article class="benefit-item">
+                <span class="benefit-icon" aria-hidden="true">🚚</span>
+                <div>
+                    <h3>Giao hàng tiện lợi</h3>
+                    <p>Thông tin đơn hàng rõ ràng</p>
+                </div>
+            </article>
+            <article class="benefit-item">
+                <span class="benefit-icon" aria-hidden="true">🔒</span>
+                <div>
+                    <h3>Thanh toán an toàn</h3>
+                    <p>Kiểm tra thông tin trước khi đặt</p>
+                </div>
+            </article>
+            <article class="benefit-item">
+                <span class="benefit-icon" aria-hidden="true">💬</span>
+                <div>
+                    <h3>Hỗ trợ khách hàng</h3>
+                    <p>Tiếp nhận phản hồi sản phẩm</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <div id="cartOverlay" class="overlay" hidden>
+        <aside
+            id="cartPanel"
+            class="side-panel"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="cartTitle"
+        >
+            <div class="panel-heading">
+                <h2 id="cartTitle">Giỏ hàng của bạn</h2>
+                <button type="button" id="closeCartButton" aria-label="Đóng giỏ hàng">
+                    ×
+                </button>
+            </div>
+
+            <div id="cartItems" class="cart-items" aria-live="polite"></div>
+
+            <div class="cart-summary">
+                <p>Tổng tiền: <strong id="cartTotal">$0.00</strong></p>
+                <button type="button" id="checkoutButton">Thanh toán</button>
+            </div>
+        </aside>
+    </div>
+
+    <div id="checkoutOverlay" class="overlay" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+        <div class="panel-heading">
+            <h2 id="checkoutTitle">Thông tin giao hàng</h2>
+            <button type="button" id="closeCheckoutButton" aria-label="Đóng">×</button>
+        </div>
+
+        <form id="checkoutForm" class="checkout-form">
+            <label for="customerName">Họ và tên</label>
+            <input id="customerName" name="name" type="text" required minlength="2" autocomplete="name">
+
+            <label for="customerEmail">Email</label>
+            <input id="customerEmail" name="email" type="email" required autocomplete="email">
+            <small id="emailError" class="form-error" aria-live="polite"></small>
+
+            <label for="customerPhone">Số điện thoại</label>
+            <input id="customerPhone" name="phone" type="tel" required autocomplete="tel">
+            <small id="phoneError" class="form-error" aria-live="polite"></small>
+
+            <label for="shippingAddress">Địa chỉ giao hàng</label>
+            <textarea id="shippingAddress" name="address" required minlength="5" autocomplete="street-address"></textarea>
+
+            <button type="submit" class="primary-button">Xác nhận thanh toán</button>
+            <p id="checkoutMessage" aria-live="polite"></p>
+        </form>
+    </section>
+</div>
+
+    <div id="reviewOverlay" class="overlay" hidden>
+        <section
+            class="modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="reviewTitle"
+        >
+            <div class="panel-heading">
+                <h2 id="reviewTitle">Đánh giá sản phẩm</h2>
+                <button type="button" id="closeReviewButton" aria-label="Đóng">
+                    ×
+                </button>
+            </div>
+            <div id="reviewContent" aria-live="polite"></div>
+        </section>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div>
+                <a href="index.html" class="logo">Mini<span>Shop</span></a>
+                <p>Cửa hàng mô phỏng phục vụ mục đích học tập.</p>
+            </div>
+            <div class="student-info">
+                <p>Thông tin sinh viên</p>
+            </div>
+        </div>
+        <p class="copyright">© 2026 UELShop. Giao diện phục vụ mục đích học tập.</p>
+    </footer>
+
+    <script src="js/products.js" defer></script>
+    <script src="js/xuly.js" defer></script>
+    
+</body>
+</html>
